@@ -49,9 +49,11 @@ python xyks.py
 核心代码位于 interceptor.js
 
 最终效果
+
 ![image](https://github.com/n0tKnow/xyks/blob/main/img/1.png?raw=true)
-但是目前低于0.21秒的成绩都不会被系统以及排行榜承认
-所以需要调整js中的耗时在210ms左右
+
+但是目前低于0.21秒的成绩都不会被系统以及排行榜承认,
+所以需要调整js中的耗时在210ms左右才能上榜，但是来的晚排行榜也不无法拿到前面的名词了。
 
 ### 口算PK
 这个模块 可以参考xyks，使用算法助手开启webview，在 bh5\leo-web-oral-pk\exercise_d4addc92615b5f1c.js的saveLocalResult 打上断点，用console hook一下saveLocalResult
