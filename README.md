@@ -1,7 +1,7 @@
 # xyks 小猿口算逃课打法 (🚧WIP)
 
 ```
-口算对小学森过于幼稚，但是对大学生刚刚好  by: 硕一也是一
+口算对小学森过于幼稚，但是对大学生刚刚好
 (什么？社畜就不能玩了？还有王法吗?)
 ```
 ## 需求分析
@@ -44,6 +44,9 @@ python xyks.py
 
 最终效果
 
+但是目前低于0.21秒的成绩都不会被系统以及排行榜承认
+所以需要调整js中的耗时在210ms左右
+
 ### 口算PK
 这个模块 可以参考xyks，使用算法助手开启webview，在 bh5\leo-web-oral-pk\exercise_d4addc92615b5f1c.js的saveLocalResult 打上断点，用console hook一下saveLocalResult
 修改costTime即可。但是存在的问题是必须要手动做完题才能触发，很可能在老年人做题过程中被对方秒了，不像练习没有时长限制。
@@ -62,5 +65,6 @@ PRs are welcome
 本项目无任何收费项目，禁止用于任何商业行为，仅供学习交流使用，侵删
 
 ## reference
-[xyks](https://github.com/xmexg/xyks)
-[frida](https://github.com/frida/frida)
+[xyks](https://github.com/xmexg/xyks) 小猿口算逆向笔记
+
+[frida](https://github.com/frida/frida) Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers.
