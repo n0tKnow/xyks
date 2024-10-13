@@ -33,17 +33,23 @@ python xyks.py
 
 ### 口算练习
 口算练习排行榜的核心指标为手速，以下省去一堆逆向分析脏活累活
-连蒙带猜 
-最终定位到成绩提交的类为 com.fenbi.android.leo.exercise.data.d2
+
+连蒙带猜  最终定位到成绩提交的类为 com.fenbi.android.leo.exercise.data.d2
+
 耗时字段 costTime
+
 直接上钩子 将costTime锁定为0
+
 然鹅最终结果并没有发生变化，猜测可能还有一个记录总耗时的字段
+
 翻到 com.fenbi.android.leo.exercise.data.p1 也有一个costTime
+
 不过这个字段没有set方法，hook construct 就可以解决
+
 核心代码位于 interceptor.js
 
 最终效果
-
+![image](https://github.com/n0tKnow/xyks/blob/main/img/1.png?raw=true)
 但是目前低于0.21秒的成绩都不会被系统以及排行榜承认
 所以需要调整js中的耗时在210ms左右
 
